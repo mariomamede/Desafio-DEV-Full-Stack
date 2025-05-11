@@ -8,7 +8,7 @@ import { store } from "../store/store";
  */
 export default function Provider(props: { children: React.ReactNode }) {
   return (
-    <ThemeProvider attribute="class">
+    <ThemeProvider attribute="class" defaultTheme="dark">
       <ReduxProvider store={store}>{props.children}</ReduxProvider>
     </ThemeProvider>
   );
