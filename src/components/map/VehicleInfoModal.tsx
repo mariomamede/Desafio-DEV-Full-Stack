@@ -2,7 +2,7 @@ import React from "react";
 
 import { LocationVehicle } from "@/types/vehicle";
 import { formatDate } from "@/lib/utils";
-import { Modal } from "../ui/Modal";
+import Modal from "../ui/Modal";
 
 interface VehicleInfoModalProps {
   vehicle: LocationVehicle;

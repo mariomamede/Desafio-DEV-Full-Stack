@@ -94,20 +94,17 @@ src/
 
 ## 🧪 Testes
 
-O projeto inclui testes unitários e de integração. Para executá-los:
+O projeto inclui testes end to end (E2E). Para executá-los:
 
 ```bash
-npm run test
-# ou
-yarn test
+npm run dev
+npm run test:e2e
 ```
 
 Para verificar a cobertura de testes:
 
 ```bash
-npm run test:coverage
-# ou
-yarn test:coverage
+npx playwright show-report
 ```
 
 ## 🌐 Deploy

@@ -1,8 +1,8 @@
 "use client";
 import React, { Suspense } from "react";
 
-import { LazyHeader } from "@/pages/home/components";
-import HomeContent from "@/pages/home/HomeContent";
+import { LazyHeader } from "@/page/home/components";
+import HomeContent from "@/page/home/HomeContent";
 import LoadingFallback from "@/components/shared/LoadingFallback";
 import { useVehicleData } from "@/hooks/useVehicleData";
 
