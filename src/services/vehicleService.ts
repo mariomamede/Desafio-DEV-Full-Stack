@@ -18,4 +18,5 @@ class VehicleService {
   }
 }
 
-export default new VehicleService();
+const vehicleServiceInstance = new VehicleService();
+export default vehicleServiceInstance;

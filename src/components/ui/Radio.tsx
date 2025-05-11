@@ -12,9 +12,16 @@ interface RadioProps {
 }
 
 /**
- * Componente Radio que permite selecionar uma opção de uma lista
+ * Componente Radio para selecionar opções.
+ * @param {string} label - O rótulo para o grupo de botões de rádio.
+ * @param {string} value - O valor atualmente selecionado.
+ * @param {string[]} options - As opções disponíveis para escolha.
+ * @param {(value: string) => void} onChange - Função de callback quando o valor é alterado.
+ * @param {string} [className] - Classes adicionais para estilização.
+ * @param {string} [id] - Id opcional para o grupo de botões de rádio.
+ * @param {"horizontal" | "vertical"} [orientation] - Orientação dos botões de rádio.
  */
-const Radio: React.FC<RadioProps> = ({
+export default function Radio({
   label,
   value,
   options,
@@ -22,7 +29,7 @@ const Radio: React.FC<RadioProps> = ({
   className = "",
   id,
   orientation = "horizontal",
-}) => {
+}: RadioProps) {
   return (
     <div className={`radio-group flex ${className}`} id={id}>
       {label && <div className="font-medium">{label}</div>}
@@ -58,6 +65,4 @@ const Radio: React.FC<RadioProps> = ({
       </RadioGroup>
     </div>
   );
-};
-
-export default Radio;
+}

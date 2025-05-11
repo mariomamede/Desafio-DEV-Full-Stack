@@ -23,6 +23,12 @@ interface VehicleFormData {
   status: string;
 }
 
+/**
+ * VehicleFormDialog component
+ * @param {boolean} isOpen - Indica se o modal está aberto ou fechado
+ * @param {function} onClose - Função para fechar o modal
+ * @returns {JSX.Element} Retorna o componente VehicleFormDialog
+ */
 export default function VehicleFormDialog({
   isOpen,
   onClose,

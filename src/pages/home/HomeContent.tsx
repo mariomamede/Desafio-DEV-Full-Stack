@@ -8,7 +8,8 @@ import { VehiclesTableSection } from "./VehiclesTableSection";
 import { Container } from "./Container";
 
 /**
- * HomeContent Component
+ * HomeContent component
+ * @returns HomeContent component
  */
 const HomeContent: React.FC = () => {
   const { isOpenDialog, closeDialog } = useFormDialog();

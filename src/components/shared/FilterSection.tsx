@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Radio from "../ui/Radio";
-import { Input } from "../ui/Input";
+import Input from "../ui/Input";
 import Button from "../ui/Button";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "@/store/store";
@@ -16,7 +16,11 @@ import { useFormDialog } from "@/hooks/useFormDialog";
 
 const listOptions = ["Rastreados", "Outros"];
 
-const Filter = () => {
+/**
+ * Componente de Filtro
+ * @returns {JSX.Element} Componente de Filtro
+ */
+export default function Filter() {
   const dispatch = useDispatch<AppDispatch>();
   const [selected, setSelected] = useState(listOptions[0]);
   const [searchValue, setSearchValue] = useState("");
@@ -84,6 +88,4 @@ const Filter = () => {
       </div>
     </div>
   );
-};
-
-export default Filter;
+}

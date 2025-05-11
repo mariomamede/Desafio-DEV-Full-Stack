@@ -1,4 +1,3 @@
-// src/components/Map/Map.tsx
 import React, { useCallback, useMemo, useState } from "react";
 import { GoogleMap, useJsApiLoader } from "@react-google-maps/api";
 
@@ -23,6 +22,15 @@ interface MapProps {
   children?: React.ReactNode;
 }
 
+/**
+ * Componente de Mapa
+ * @param {string} width - Largura do mapa
+ * @param {string} height - Altura do mapa
+ * @param {google.maps.LatLngLiteral | google.maps.LatLng} center - Centro do mapa
+ * @param {number} [zoom=10] - Nível de zoom do mapa (padrão: 10)
+ * @param {React.ReactNode} [children] - Elementos filhos a serem renderizados no mapa
+ * @returns {JSX.Element} Componente de Mapa
+ */
 const Map: React.FC<MapProps> = ({
   width,
   height,

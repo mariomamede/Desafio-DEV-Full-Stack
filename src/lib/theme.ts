@@ -2,7 +2,11 @@ import { useEffect, useState } from "react";
 
 type Theme = "light" | "dark" | "system";
 
-// Hook para gerenciar o tema
+/**
+ * Hook personalizado para gerenciar o tema da aplicação (claro, escuro ou sistema).
+ * Ele permite alternar entre os temas e armazena a preferência do usuário no localStorage.
+ * @returns {Object} - Um objeto contendo o tema atual, o tema resolvido, uma função para alternar o tema e uma função para definir um tema específico.
+ */
 export function useTheme() {
   const [theme, setTheme] = useState<Theme>("system");
   const [resolvedTheme, setResolvedTheme] = useState<"light" | "dark">("light");

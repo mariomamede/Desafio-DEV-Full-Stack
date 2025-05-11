@@ -1,4 +1,3 @@
-// src/components/Map/VehicleMarkers.tsx
 import React from "react";
 import { Marker, InfoBox } from "@react-google-maps/api";
 import { LocationVehicle } from "@/types/vehicle";
@@ -12,6 +11,11 @@ interface VehicleMarkersProps {
   onCloseInfoWindow: () => void;
 }
 
+/**
+ * Componente para exibir marcadores de veículos no mapa
+ * @param {VehicleMarkersProps} props - Propriedades do componente
+ * @returns {JSX.Element} Marcadores de veículos
+ */
 export const VehicleMarkers: React.FC<VehicleMarkersProps> = ({
   vehicles,
   getVehicleIcon,
@@ -38,7 +42,7 @@ export const VehicleMarkers: React.FC<VehicleMarkersProps> = ({
           options={{
             closeBoxURL: "",
             enableEventPropagation: true,
-            pixelOffset: new google.maps.Size(-100, -180),
+            pixelOffset: new google.maps.Size(-100, -150),
           }}
           position={
             new google.maps.LatLng(selectedVehicle.lat, selectedVehicle.lng)

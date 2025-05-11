@@ -9,7 +9,7 @@ import { useVehicleData } from "@/hooks/useVehicleData";
 /**
  * Home Page Component
  */
-const Home: React.FC = () => {
+export default function Home() {
   const { isLoading } = useVehicleData();
 
   return (
@@ -22,6 +22,4 @@ const Home: React.FC = () => {
       </div>
     </div>
   );
-};
-
-export default Home;
+}

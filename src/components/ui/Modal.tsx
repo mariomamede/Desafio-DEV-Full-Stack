@@ -16,7 +16,21 @@ interface ModalProps {
   maxHeight?: string;
 }
 
-export const Modal = ({
+/**
+ * Um componente de modal simples que pode ser usado para exibir conteúdo em um formato de sobreposição.
+ * @param {React.ReactNode} children - O conteúdo a ser exibido dentro do modal.
+ * @param {string} className - Classes adicionais para estilização.
+ * @param {string} padding - O preenchimento do modal, pode ser "none", "small", "medium" ou "large".
+ * @param {string} shadow - O nível de sombra do modal, pode ser "none", "sm", "md" ou "lg".
+ * @param {string} rounded - O nível de borda arredondada do modal, pode ser "none", "sm", "md", "lg" ou "full".
+ * @param {boolean} border - Se deve ter uma borda ou não.
+ * @param {boolean} hasCloseButton - Se deve exibir o botão de fechar ou não.
+ * @param {function} onClose - Função a ser chamada quando o botão de fechar for clicado.
+ * @param {boolean} showArrow - Se deve exibir uma seta ou não.
+ * @param {string} arrowPosition - A posição da seta, pode ser "top", "bottom", "left" ou "right".
+ * @param {string} maxHeight - A altura máxima do modal.
+ */
+export default function Modal({
   children,
   className = "",
   padding = "medium",
@@ -28,7 +42,7 @@ export const Modal = ({
   showArrow = false,
   arrowPosition = "bottom",
   maxHeight,
-}: ModalProps) => {
+}: ModalProps) {
   const paddingMap = {
     none: "p-0",
     small: "p-2",
@@ -120,4 +134,4 @@ export const Modal = ({
       )}
     </div>
   );
-};
+}

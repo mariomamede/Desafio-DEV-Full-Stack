@@ -1,10 +1,20 @@
 import { ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 
+/**
+ * Função utilitária para mesclar nomes de classes usando clsx e tailwind-merge.
+ * @param inputs - Os nomes de classes a serem mesclados.
+ * @returns
+ */
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
+/**
+ * Função para aplicar uma máscara de placa de veículo.
+ * @param value - O valor da placa a ser formatado.
+ * @returns A placa formatada ou uma string vazia se o valor for inválido.
+ */
 export function applyLicensePlateMask(value: string) {
   if (!value) return "";
 
@@ -25,14 +35,29 @@ export function applyLicensePlateMask(value: string) {
   return cleanValue;
 }
 
+/**
+ * Função para formatar uma data no formato "dd/mm/aaaa hh:mm:ss".
+ * @param dateString - A string da data a ser formatada.
+ * @returns A data formatada como uma string.
+ */
 export const formatDate = (dateString: string): string => {
   return new Date(dateString).toLocaleString();
 };
 
+/**
+ * Função para gerar um hash numérico a partir de uma string.
+ * @param str - String a ser convertida em hash
+ * @returns
+ */
 export const generateHashFromString = (str: string): number => {
   return str.split("").reduce((acc, char) => acc + char.charCodeAt(0), 0);
 };
 
+/**
+ * Função para criar um ícone de caminhão para o Google Maps.
+ * @param color - Cor do ícone em formato hexadecimal ou nome da cor.
+ * @returns Um objeto de ícone do Google Maps.
+ */
 export const createTruckIcon = (color: string): google.maps.Icon => {
   const svg = `
     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 256 256" enable-background="new 0 0 256 256" xml:space="preserve">

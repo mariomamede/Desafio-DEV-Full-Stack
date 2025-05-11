@@ -2,10 +2,11 @@ import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { Sun, Moon } from "lucide-react";
 
-/*
- * ThemeToggle - Componente para alternar entre temas claro e escuro
+/**
+ * Componente de alternância de tema (claro/escuro).
+ * @returns {JSX.Element} Componente de alternância de tema.
  */
-const ThemeToggle = () => {
+export default function ThemeToggle() {
   const { resolvedTheme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
@@ -24,8 +25,6 @@ const ThemeToggle = () => {
   const toggleTheme = () => {
     setIsDark(!isDark);
 
-    // Pequeno atraso para permitir que a animação visual ocorra
-    // antes da mudança real do tema (que pode causar reflow)
     setTimeout(() => {
       setTheme(!isDark ? "dark" : "light");
     }, 200);
@@ -107,6 +106,4 @@ const ThemeToggle = () => {
       />
     </button>
   );
-};
-
-export default ThemeToggle;
+}

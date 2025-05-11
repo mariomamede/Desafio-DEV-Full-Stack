@@ -1,4 +1,3 @@
-// src/components/Map/VehicleInfoModal.tsx
 import React from "react";
 
 import { LocationVehicle } from "@/types/vehicle";
@@ -10,6 +9,12 @@ interface VehicleInfoModalProps {
   onClose: () => void;
 }
 
+/**
+ * Componente de modal para exibir informações do veículo
+ * @param {LocationVehicle} vehicle - Objeto que contém as informações do veículo
+ * @param {() => void} onClose - Função chamada ao fechar o modal
+ * @returns {JSX.Element} Componente de modal com informações do veículo
+ */
 export const VehicleInfoModal: React.FC<VehicleInfoModalProps> = ({
   vehicle,
   onClose,

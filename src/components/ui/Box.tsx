@@ -10,6 +10,11 @@ interface BoxProps {
   border?: boolean;
 }
 
+/**
+ * Componente Box para criar um contêiner estilizado
+ * @param {BoxProps} props - Propriedades do componente Box
+ * @returns {JSX.Element} Componente Box estilizado
+ */
 export const Box = ({
   children,
   className = "",

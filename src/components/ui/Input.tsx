@@ -13,7 +13,18 @@ interface InputProps<T> {
   id?: string;
 }
 
-export const Input: React.FC<InputProps<HTMLInputElement>> = ({
+/**
+ * Um componente de input
+ * @param {string} name - Nome do campo de entrada.
+ * @param {string} type - Tipo de entrada (por exemplo, "text", "email", etc.).
+ * @param {string} value - Valor atual do campo de entrada.
+ * @param {string} placeholder - Texto de espaço reservado exibido quando o campo está vazio.
+ * @param {function} onChange - Função chamada quando o valor do campo muda.
+ * @param {function} onInput - Função chamada quando o usuário digita no campo.
+ * @param {string} className - Classes adicionais para estilização.
+ * @param {string} id - ID do campo de entrada.
+ */
+export default function Input({
   name,
   type,
   value,
@@ -22,7 +33,7 @@ export const Input: React.FC<InputProps<HTMLInputElement>> = ({
   onInput,
   className = "",
   id,
-}) => {
+}: InputProps<HTMLInputElement>) {
   return (
     <InputUi
       name={name}
@@ -38,4 +49,4 @@ export const Input: React.FC<InputProps<HTMLInputElement>> = ({
       id={id}
     />
   );
-};
+}

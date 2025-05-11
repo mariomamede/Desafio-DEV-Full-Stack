@@ -6,7 +6,9 @@ import { useVehicle } from "./useVehicle";
 const POLLING_INTERVAL = 120000; // 2 minutes
 
 /**
- * useVehicleData Hook
+ * Hook personalizado para buscar dados de veículos e gerenciar o estado de carregamento.
+ * Ele busca os dados dos veículos a cada 2 minutos e atualiza o estado de carregamento conforme necessário.
+ * @returns {Object} - Um objeto contendo o estado de carregamento.
  */
 export const useVehicleData = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -20,15 +22,12 @@ export const useVehicleData = () => {
       setIsLoading(false);
     };
 
-    // Initial load
     fetchData();
 
-    // Set up polling interval
     const interval = setInterval(() => {
       fetchData();
     }, POLLING_INTERVAL);
 
-    // Clean up interval on unmount
     return () => clearInterval(interval);
   }, []);
 

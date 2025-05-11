@@ -1,9 +1,10 @@
 import React from "react";
 import Filter from "@/components/shared/FilterSection";
-import { Divider } from "@/components/ui/Divider";
+import Divider from "@/components/ui/Divider";
 
 /**
- * FilterSection Component
+ * Componente FilterSection
+ * @returns {JSX.Element}
  */
 export const FilterSection: React.FC = () => {
   return (

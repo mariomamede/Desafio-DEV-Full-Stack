@@ -1,4 +1,3 @@
-// src/types/vehicle.ts
 export interface Vehicle {
   id: string;
   plate: string;

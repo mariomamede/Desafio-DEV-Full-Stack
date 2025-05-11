@@ -13,18 +13,23 @@ interface DialogProps<T = HTMLButtonElement> {
   className?: string;
 }
 
-const Dialog: React.FC<DialogProps> = ({ open, onClose, className = "" }) => {
+/**
+ * Componente de diálogo estilizado
+ * @param {DialogProps} props - Propriedades do componente Dialog
+ * @returns {JSX.Element} Componente Dialog estilizado
+ */
+export default function Dialog({ open, onClose, className = "" }: DialogProps) {
   const handleClose = (value: boolean) => {
     if (onClose) {
-      onClose(new MouseEvent("click") as any); // Simulate a MouseEvent if needed
+      onClose(value as unknown as React.MouseEvent<HTMLButtonElement>);
     }
   };
 
   return (
     <DialogUi
       open={open}
-      onClose={(value) => handleClose(value)}
-      className="relative z-50"
+      onClose={handleClose}
+      className={cn("relative z-50", className)}
     >
       <div className="fixed inset-0 flex w-screen items-center justify-center p-4">
         <DialogPanel className="max-w-lg space-y-4 border p-12">
@@ -44,6 +49,4 @@ const Dialog: React.FC<DialogProps> = ({ open, onClose, className = "" }) => {
       </div>
     </DialogUi>
   );
-};
-
-export default Dialog;
+}

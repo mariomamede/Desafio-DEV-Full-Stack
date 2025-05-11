@@ -55,6 +55,10 @@ const columns = [
   }),
 ];
 
+/**
+ * VehicleDataTable component
+ * @returns Returna o componente VehicleDataTable
+ */
 export default function VehicleDataTable() {
   const [sorting, setSorting] = useState<SortingState>([]);
   const observer = useRef<IntersectionObserver | null>(null);

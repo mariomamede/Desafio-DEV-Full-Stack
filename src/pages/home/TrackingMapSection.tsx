@@ -4,10 +4,9 @@ import { useSelector } from "react-redux";
 import { RootState } from "@/store/store";
 import { Box } from "@/components/ui/Box";
 import Map from "@/components/map/Map";
-import { useVehicleLocations } from "@/hooks/useVehicleLocations";
 import { useVehicle } from "@/hooks/useVehicle";
 
-// Map center coordinates - consider moving to a constants file
+// Coordenadas do centro do mapa
 const MAP_CENTER = {
   lat: -22.558228864927507,
   lng: -47.40859903725707,
@@ -16,7 +15,9 @@ const MAP_CENTER = {
 const MAP_ZOOM = 8;
 
 /**
- * TrackingMapSection Component
+ * Componente de seção do mapa de rastreamento.
+ * Exibe um mapa com a localização dos veículos rastreados.
+ * @returns {JSX.Element} Componente de seção do mapa de rastreamento.
  */
 export const TrackingMapSection: React.FC = () => {
   const { isTracking, lastUpdate } = useSelector(

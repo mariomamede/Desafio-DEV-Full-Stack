@@ -2,7 +2,8 @@ import React from "react";
 import VehicleDataTable from "@/components/shared/VehicleDataTable";
 
 /**
- * VehiclesTableSection Component
+ *  Componente VehiclesTableSection
+ * @returns Uma seção que contém uma tabela de veículos.
  */
 export const VehiclesTableSection: React.FC = () => {
   return (

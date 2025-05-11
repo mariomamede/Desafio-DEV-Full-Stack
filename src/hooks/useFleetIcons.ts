@@ -1,9 +1,8 @@
-// src/components/Map/hooks/useFleetIcons.ts
 import { useState, useEffect, useCallback, useMemo } from "react";
 import { LocationVehicle } from "@/types/vehicle";
 import { createTruckIcon } from "@/lib/utils";
 
-const TRUCK_COLORS = [
+export const TRUCK_COLORS = [
   "#2196F3", // azul
   "#4CAF50", // verde
   "#FF9800", // laranja
@@ -36,6 +35,11 @@ const TRUCK_COLORS = [
   "#F48FB1", // rosa claro
 ];
 
+/**
+ * Hook para mapear ícones de frotas de veículos.
+ * @param vehicles - Lista de veículos a serem mapeados.
+ * @returns
+ */
 export const useFleetIcons = (vehicles: LocationVehicle[]) => {
   const [fleetIconMap, setFleetIconMap] = useState<
     Record<string, google.maps.Icon>

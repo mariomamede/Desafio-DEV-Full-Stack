@@ -12,7 +12,12 @@ interface ButtonProps<T = HTMLButtonElement> {
   id?: string;
 }
 
-const Button: React.FC<ButtonProps> = ({
+/**
+ * Componente de botão estilizado
+ * @param {ButtonProps} props - Propriedades do componente Button
+ * @returns {JSX.Element} Componente Button estilizado
+ */
+export default function Button({
   children,
   type = "button",
   disabled = false,
@@ -20,7 +25,7 @@ const Button: React.FC<ButtonProps> = ({
   onClick,
   className = "",
   id,
-}) => {
+}: ButtonProps) {
   const buttonStyles = {
     primary: "bg-[var(--primary)] text-[var(--white)]",
     secondary: "border-[var(--border-color)] bg-[var(--secondary)]",
@@ -35,14 +40,12 @@ const Button: React.FC<ButtonProps> = ({
         "inline-flex justify-center rounded-md border border-transparent px-4 py-2 text-sm font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary)] focus-visible:ring-opacity-50",
         buttonStyles[style],
         className,
-        !disabled && "cursor-pointer", // Adiciona o cursor pointer se não estiver desabilitado
-        disabled && "cursor-not-allowed" // Adiciona o cursor not-allowed se estiver desabilitado
+        !disabled && "cursor-pointer",
+        disabled && "cursor-not-allowed"
       )}
       id={id}
     >
       {children}
     </ButtonUi>
   );
-};
-
-export default Button;
+}
