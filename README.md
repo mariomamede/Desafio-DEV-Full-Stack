@@ -120,4 +120,4 @@ O projeto está disponível online em:
 
 ---
 
-Desenvolvido com ❤️ por [Seu Nome](https://github.com/seu-usuario)
+Desenvolvido com ❤️ por [Mario Mamede](https://github.com/mariomamede)
