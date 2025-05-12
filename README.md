@@ -110,7 +110,7 @@ npx playwright show-report
 ## 🌐 Deploy
 
 O projeto está disponível online em:
-[https://vehicle-tracker-demo.vercel.app](https://vehicle-tracker-demo.vercel.app)
+[https://vehicle-tracker-demo.vercel.app](https://desafio-dev-full-stack.vercel.app/)
 
 ## 📝 Notas Adicionais
 
@@ -120,4 +120,4 @@ O projeto está disponível online em:
 
 ---
 
-Desenvolvido com ❤️ por [Mario Mamede](https://github.com/mariomamede)
+Desenvolvido por [Mario Mamede](https://github.com/mariomamede)
